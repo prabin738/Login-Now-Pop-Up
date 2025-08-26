@@ -6,12 +6,17 @@ const App = () => {
 
   return (
     <div className="App">
-      <button onClick={() => setModalstatus(!modalstatus)} className="en">
+      <button onClick={() => setModalstatus(true)} className="en">
         Enquire Now
       </button>
-      <div className={`modalOverlay ${modalstatus ? "modal-show" : ""} `}></div>
+      <div
+        onClick={() => setModalstatus(false)}
+        className={`modalOverlay ${modalstatus ? "modal-show" : ""} `}
+      ></div>
       <div className={`modal-div ${modalstatus ? "show-modal-div" : ""} `}>
-        <h3>Enquiry Now</h3>
+        <h3>
+          Enquiry Now <span onClick={() => setModalstatus(false)}>&times;</span>
+        </h3>
       </div>
     </div>
   );

@@ -41,3 +41,7 @@
 .show-modal-div {
   top: 50%;
 }
+h3 span {
+  font-size: 24px;
+  cursor: pointer;
+}
